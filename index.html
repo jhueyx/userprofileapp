@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+
+		<!--Font Awesome  -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+		<!-- Animate CSS CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"  crossorigin="anonymous">
+
+		<!--Reset CSS  -->
+		<link rel="stylesheet" href="css/reset.css">
+
+		<!--Bootstrap  -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<!-- Main Custom CSS  -->
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+
+
+    <div class="container">
+
+    	<div id="newProfile" class="col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 col-lg-10 col-lg-offset-1">
+    		<h1>New Profile</h1>
+    		<!-- new profile -->
+  			<form>
+  				<!-- NAME -->
+  				<div class="form-group">
+  					<input type="text" id="userfname" class="form-control" placeholder="First Name">
+  					<input type="text" id="userlname" class="form-control" placeholder="Last Name">
+  				</div>
+  				<!-- GENDER -->
+  				<div class="form-group">
+  					Gender:
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio1" class="userGender" value="male"> Male
+  					</label>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio1" class="userGender" value="female"> Female
+  					</label>
+  				</div>
+
+  				<!-- EMAIL -->
+  				<div class="form-group">
+  					<input type="email" id="userEmail" class="form-control" placeholder="Email Address">
+  				</div>
+
+  				<!-- PHONE NUMBER -->
+  				<div class="form-group">
+  					<input type="number" id="userPhone" class="form-control" placeholder="Phone Number">
+  				</div>
+
+  				<!-- FAVORITE PRIMARY COLOR -->
+  				<div class="form-group">
+  					<select class="form-control">
+  						<option value="" class="userColor">Select your favorite color</option>
+  						<option value="Red" class="userColor">Red</option>
+  						<option value="Green" class="userColor">Green</option>
+  						<option value="Blue" class="userColor">Blue</option>
+  					</select>
+  				</div>
+
+  				<!-- CONTINENT OF BIRTH -->
+  				<div class="form-group">
+  					Continent of birth:
+  					<br>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio2" class="userBirth" value="Africa"> Africa
+  					</label>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio2" class="userBirth" value="Asia"> Asia
+  					</label>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio2" class="userBirth" value="Australia"> Australia
+  					</label>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio2" class="userBirth" value="Europe"> Europe
+  					</label>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio2" class="userBirth" value="North America"> North America
+  					</label>
+  					<label class="radio-inline">
+  					  <input type="radio" name="radio2" class="userBirth" value="South America"> South America
+  					</label>
+  				</div>
+  				<button id="sendDataButton" type="button" class="btn btn-primary">Continue</button>
+
+  				<div id="results"></div>
+  			</form>
+
+    	</div><!-- /.col-sm-6 -->
+
+    	<div id="updatedProfile" class="col-sm-6 col-sm-offset-3">
+    		<h1>User Profile</h1>
+    		<!-- updated profile -->
+    		<div>
+    			<h2 id='newUserName'></h2>
+    			<h3 id="newUserGender"></h3>
+    			<h3 id="newUserEmail"></h3>
+    			<h3 id="newUserPhone"></h3>
+    			<h3 id="newUserColor"></h3>
+    			<h3 id="newUserBirth"></h3>
+    		</div><!-- /#updatedProfile -->
+
+    	</div><!-- /.col-sm-6 -->
+
+    </div><!-- /.container -->
+
+
+<!--Scripts  -->
+			<!--jquery updated non-slim -->
+			<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  			<!--popper  -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<!--bootstrap  -->
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+			<!-- Custom JS -->
+			<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
