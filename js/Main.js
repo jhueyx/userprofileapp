@@ -1,7 +1,7 @@
 // function to get users data
 function getUserData() {
 	// create var to display results to later
-	var	userPhone     = document.getElementById('results');
+	var	userPhone     = document.getElementById('results'); 
 
 	// store vaules for user first & last name, email and phone num
 	var userFirst     = document.getElementById('userfname').value;
@@ -18,26 +18,26 @@ function getUserData() {
 	var userGender, userColor, userBirth;
 
 	/*
-	FIRST NAME
+	FIRST NAME - checking if thre is a failure
 	*/
 	if(userFirst == "") {
 		// add a class of failure to results if no user first name value
 		results.className = "failure";
 		// update the text content of results
-		results.textContent = "you forgot to add your first name";
+		results.textContent = "missing first name";
 
 		// stop function if no answer
 		return;
 	};
 
 	/*
-	LAST NAME
+	LAST NAME - checking if thre is a failure
 	*/
 	if (userLast == "") {
 		// add a class of failure to results if no user last name value
 		results.className = "failure";
 		// update the text content of results
-		results.textContent = "you forgot to add your last name";
+		results.textContent = "missing last name";
 
 		// stop function if no answer
 		return;
@@ -54,7 +54,7 @@ function getUserData() {
 			userGender = userGenderEls[i].value;
 		};
 	};
-	// stop function if no data is there for gender
+	// stop function if no data is there for gender// use undefined if there is no checkbox sledcted
 	if(userGender == undefined) {
 		// add a class of failure to results if no user gender value
 		results.className = "failure";
@@ -68,11 +68,12 @@ function getUserData() {
 	/*
 	EMAIL
 	*/
+	// if blank then use show the failure message
 	if (userEmail == "") {
 		// add a class of failure to results if no user email value
 		results.className = "failure";
 		// update the text content of results
-		results.textContent = "you forgot to add your email";
+		results.textContent = "missing email";
 
 		// stop function if no answer
 		return;
@@ -81,11 +82,12 @@ function getUserData() {
 	/*
 	PHONE NUMBER
 	*/
+	// if bank, then show the failure message
 	if (userPhone == "") {
 		// add a class of failure to results if no user phone value
 		results.className = "failure";
 		// update the text content of results
-		results.textContent = "you forgot to add your phone number";
+		results.textContent = "missing number ";
 
 		// stop function if no answer
 		return;
@@ -154,9 +156,13 @@ function getUserData() {
 	};
 
 	// confirm existance of all user profile data
-	console.log(userProfile);
+	// prints an array of all the options selected 
+
+	console.log(userProfile); 
 
 	// run displayProfile after 1 second passing in new profile data to be displayed
+	// function is below
+
 	setTimeout(function() {
 		displayProfile(userProfile);
 	}, 1000);
@@ -184,9 +190,9 @@ function displayProfile(userProfile) {
 	userColor.innerText  = "Favorite Color: " + userProfile.color;
 	userBirth.innerText  = "Birth Continent: " + userProfile.birth;
 
-	// hide new profile form
+	// hide new profile form --- this hides the question form
 	document.getElementById('newProfile').style.display = "none";
-	// display updated profile data
+	// display updated profile data-- displays only the data
 	document.getElementById('updatedProfile').style.display = "block";
 }
 

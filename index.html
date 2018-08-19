@@ -30,11 +30,13 @@
     		<!-- new profile -->
   			<form>
   				<!-- NAME -->
+          <!-- create two boxes where one is an input for the first name and the other for last name -->
   				<div class="form-group">
   					<input type="text" id="userfname" class="form-control" placeholder="First Name">
   					<input type="text" id="userlname" class="form-control" placeholder="Last Name">
   				</div>
   				<!-- GENDER -->
+          <!-- create a in line radio form with two options with one for male and one for femal -->
   				<div class="form-group">
   					Gender:
   					<label class="radio-inline">
@@ -46,16 +48,19 @@
   				</div>
 
   				<!-- EMAIL -->
+          <!-- create input box for the email address -->
   				<div class="form-group">
   					<input type="email" id="userEmail" class="form-control" placeholder="Email Address">
   				</div>
 
   				<!-- PHONE NUMBER -->
+          <!-- create an input box for the phone number -->
   				<div class="form-group">
   					<input type="number" id="userPhone" class="form-control" placeholder="Phone Number">
   				</div>
 
   				<!-- FAVORITE PRIMARY COLOR -->
+          <!-- Create a dropdown form for options of favorite color -->
   				<div class="form-group">
   					<select class="form-control">
   						<option value="" class="userColor">Select your favorite color</option>
@@ -66,6 +71,7 @@
   				</div>
 
   				<!-- CONTINENT OF BIRTH -->
+          <!-- create a radio feature that shows the continent of birth  -->
   				<div class="form-group">
   					Continent of birth:
   					<br>
@@ -88,6 +94,10 @@
   					  <input type="radio" name="radio2" class="userBirth" value="South America"> South America
   					</label>
   				</div>
+
+
+          <!-- submission button to submit the data, using primary button to color the button -->
+
   				<button id="sendDataButton" type="button" class="btn btn-primary">Continue</button>
 
   				<div id="results"></div>
